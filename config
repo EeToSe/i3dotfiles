@@ -101,7 +101,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -158,7 +158,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Open applications on specific workspaces
-assign [class="Thunderbird"] $ws5
+assign [class="Thunderbird"] $ws4
 assign [class="QuickQ"] $ws10
 assign [class="Clementine"] $ws10
 
@@ -233,12 +233,18 @@ bindsym $mod+m bar mode toggle
 # Rofi settings
 bindsym $mod+Tab exec rofi -combi-modi window#drun -show combi
 # Task manage Ticktick
-bindsym $mod+t exec firefox https://ticktick.com
+bindsym $mod+t exec thunderbird
+bindsym $mod+f exec nautilus
 
 #exec_always compton -f
 # i3lock wallpaper
-bindsym $mod+l exec i3lock -i /home/steve/Pictures/razer.png
+bindsym $mod+l exec i3lock -i /home/steve/Pictures/wallpaper/razer.png
 # desktop wallpaper
-exec_always --no-startup-id feh --bg-scale /home/steve/Pictures/wallpaper.png
-### focus follows mouse or not
+exec_always --no-startup-id feh --bg-scale /home/steve/Pictures/wallpaper/wallpaper.png
+# focus follows mouse or not
 focus_follows_mouse yes
+
+# Boot programs
+exec --no-startup-id firefox
+exec --no-startup-id /opt/QuickQ/QuickQ 
+
