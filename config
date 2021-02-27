@@ -152,6 +152,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Open applications on specific workspaces
+assign [class="GitHub Desktop"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="QuickQ"] $ws10
 assign [class="Clementine"] $ws10
