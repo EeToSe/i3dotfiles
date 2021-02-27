@@ -4,12 +4,6 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
-#################
-#####TODO########
-#################
-# Screen brightness
-
 set $mod Mod1
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
