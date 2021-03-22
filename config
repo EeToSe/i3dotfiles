@@ -239,6 +239,12 @@ exec_always --no-startup-id feh --bg-scale /home/steve/Pictures/wallpaper/wallpa
 focus_follows_mouse yes
 
 # Boot programs
-exec --no-startup-id firefox
-exec --no-startup-id /opt/QuickQ/QuickQ 
+exec --no-startup-id firefox https://www.notion.so/
+exec --no-startup-id /opt/QuickQ/QuickQ
+exec i3 --force-xinerama -V >>~/.i3/i3log 2>&1
+# natural scrolling
+exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
+# move focused window between monitors
+bindsym $mod+Shift+greater move container to output right
+bindsym $mod+Shift+less move container to output left
 
