@@ -116,10 +116,10 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 "
+set $ws1 "1 web"
 set $ws2 "2 "
 set $ws3 "3 "
-set $ws4 "4  "
+set $ws4 "4 "
 set $ws5 "5 "
 set $ws6 "6"
 set $ws7 "7"
@@ -152,10 +152,14 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Open applications on specific workspaces
+assign [class="jetbrains-pycharm-ce"] $ws2
+assign [class="Inkscape"] $ws4
 assign [class="calibre"] $ws3
-assign [class="GitHub Desktop"] $ws4
+assign [class="Zotero"] $ws3
+assign [class="GitHub Desktop"] $ws6
 assign [class="Thunderbird"] $ws5
 assign [class="QuickQ"] $ws10
+assign [class="blueman-manager"] $ws10
 
 # Open specific applications in floating mode
 for_window [class="Nautilus"] floating enable, resize set 900px 700px
@@ -241,6 +245,7 @@ focus_follows_mouse yes
 # Boot programs
 exec --no-startup-id firefox https://www.notion.so/
 exec --no-startup-id /opt/QuickQ/QuickQ
+exec --no-startup-id blueman-manager
 exec i3 --force-xinerama -V >>~/.i3/i3log 2>&1
 # natural scrolling
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
